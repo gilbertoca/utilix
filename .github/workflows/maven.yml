@@ -22,7 +22,7 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       - name: Build with Maven
         run: mvn -V javadoc:javadoc -DadditionalJOption=-Xdoclint:none install --file pom.xml
-      - name: Publish to personal mave repository
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: mvn -V javadoc:javadoc -DadditionalJOption=-Xdoclint:none deploy --file pom.xml
+      # - name: Publish to personal mave repository
+      #   env:
+      #        GITHUB_TOKEN: ${{ github.token }}
+      #   run: mvn -V javadoc:javadoc -DadditionalJOption=-Xdoclint:none deploy --file pom.xml
